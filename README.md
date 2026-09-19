@@ -1,4 +1,4 @@
-# hyperliquid-node-sidecar
+# hyperdata-node-sidecar
 
 Watches the `hyperdata-node` (hl-visor) output tree and publishes a **notification** to Kafka for every new file landed.
 
@@ -7,7 +7,7 @@ hyperdata-node ──► ~/hl/data/{node_fills, node_order_statuses,
                               node_raw_book_diffs, ...}/hourly/<date>/<hour>
                         │
                         ▼
-              hyperliquid-node-sidecar (this service)
+              hyperdata-node-sidecar (this service)
                         │  watch (inotify / polling fallback)
                         ▼
               Kafka topic: hyperliquid.node-files
